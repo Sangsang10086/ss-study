@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ss-aop" />
+        <module name="ss-globalException" />
+        <module name="ss-thread" />
+        <module name="ss-redis" />
+        <module name="ss-gateWay" />
+        <module name="ss-xxlJob" />
+        <module name="ss-rabbitMq" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ss-aop" options="" />
+      <module name="ss-gateWay" options="" />
+      <module name="ss-globalException" options="" />
+      <module name="ss-rabbitMq" options="" />
+      <module name="ss-redis" options="" />
+      <module name="ss-thread" options="" />
+      <module name="ss-xxlJob" options="" />
+    </option>
+  </component>
+</project>

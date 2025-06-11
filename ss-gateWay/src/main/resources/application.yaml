@@ -1,0 +1,44 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: aop-service
+#          uri: lb://aop-service
+#          predicates:
+#            - Path=/api/aop/**
+#          filters: # 过滤器，路由转发之前进行一些处理，如修改请求头，重试机制等
+#            - StripPrefix=1     #  去掉一级前缀
+#
+#        - id: rabbitMq-service             #  路由id，用于区分不同路由
+#          uri: lb://rabbitMq-service    #  路由转发，请求最终被转发的位置
+#          predicates:                      # 匹配条件，满足指定条件的请求会被转发
+#            - Path=/api/rabbitMq/**
+##            - Method=GET,POST
+#          filters:                         # 过滤器，路由转发之前进行一些处理，如修改请求头，重试机制等
+#            - StripPrefix=1
+#
+#        - id: redis-service
+#          uri: lb://redis-service
+#          predicates:
+#            - Path=/api/redis/**
+#          filters:
+#            - StripPrefix=1
+#
+#        - id: thread-service
+#          uri: lb://thread-service
+#          predicates:
+#            - Path=/api/thread/**
+#          filters:
+#            - StripPrefix=1
+#
+#        - id: xxlJob-service
+#          uri: lb://xxlJob-service
+#          predicates:
+#            - Path=/api/xxlJob/**
+#          filters:
+#            - StripPrefix=1
+#
+#server:
+#  port: 8080
+#
+#

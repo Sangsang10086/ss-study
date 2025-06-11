@@ -1,0 +1,48 @@
+#spring:
+#  application:
+#    name: rabbitMq-service
+#
+#  # 数据源
+#  datasource:
+#    username: root
+#    password: 123456
+#    url: jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+#
+#  #  RabbitMQ
+#  rabbitmq:
+#    host: 127.0.0.1
+#    port: 5672 # 端口
+#    virtual-host: / # 虚拟主机
+#    username: guest # 用户名
+#    password: guest # 密码
+#    listener:
+#      simple:
+#        prefetch: 1 # 每次取一条消息，处理完成才能获取下一条消息
+#        acknowledge-mode: auto #  自动ack
+#    connection-timeout: 1s # 连接超时时间
+#    template:
+#      retry:
+#        enabled: true # 开启消费者失败重试
+#        initial-interval: 1000ms # 初识的失败等待时长为1秒
+#        multiplier: 1 # 失败的等待时长倍数，下次等待时长 = multiplier * last-interval
+#        max-attempts: 3 # 最大重试次数
+#      mandatory: true # 当交换机无法找到队列时，false【直接丢弃数据】，true【会将消息返回给生产者】
+#    publisher-confirm-type: correlated # 生产者 -> 交换机 的确认
+#    publisher-returns: true # 交换机 -> 队列 的确认
+#
+#
+#mybatis-plus:
+#  configuration:
+#    mapUnderscoreToCamelCase: true  # 自动将数据库下划线命名字段映射为实体类的驼峰命名属性。
+#  mapper-locations: classpath*:mapper/**/*.xml # 指定 MyBatis 的 XML 映射文件位置，支持通配符匹配多路径下的 .xml 文件。
+#
+#
+##端口
+#server:
+#  port: 7001
+#
+##日志级别
+#logging:
+#  level:
+#    com.study.example.*: info
+#
