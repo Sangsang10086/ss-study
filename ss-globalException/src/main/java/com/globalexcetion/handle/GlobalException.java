@@ -1,6 +1,7 @@
 package com.globalexcetion.handle;
 
-import com.study.example.entity.result.Result;
+
+import com.globalexcetion.entity.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ExceptionHandler;

@@ -1,4 +1,4 @@
-package com.redis.ssredis.po;
+package com.redis.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;

@@ -5,6 +5,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-xxlJob/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-thread/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-rabbitMq/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-globalExcetion/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-gateWay/pom.xml" />
       </list>
     </option>
   </component>

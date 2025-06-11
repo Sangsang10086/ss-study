@@ -1,7 +1,8 @@
-package com.redis.ssredis.biz;
+package com.redis.biz;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.redis.ssredis.po.Teacher;
+import com.redis.po.Teacher;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>
@@ -11,7 +12,8 @@ import com.redis.ssredis.po.Teacher;
  * @author sang
  * @since 2025-06-06
  */
+@Service
 public interface ITeacherService extends IService<Teacher> {
 
-    String getTeacher(String idAddress);
+    void getTeacher(String idAddress);
 }
