@@ -12,6 +12,8 @@
         <option value="$PROJECT_DIR$/ss-rabbitMq/pom.xml" />
         <option value="$PROJECT_DIR$/ss-globalExcetion/pom.xml" />
         <option value="$PROJECT_DIR$/ss-gateWay/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-commons/common-rabbit-mq-listenner/pom.xml" />
       </list>
     </option>
   </component>

@@ -12,15 +12,19 @@
         <module name="ss-thread" />
         <module name="ss-redis" />
         <module name="ss-gateWay" />
+        <module name="ss-commons" />
         <module name="ss-xxlJob" />
         <module name="ss-rabbitMq" />
+        <module name="common-rabbitmq-listener" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common-rabbitmq-listener" options="" />
       <module name="ss-aop" options="" />
+      <module name="ss-commons" options="" />
       <module name="ss-gateWay" options="" />
       <module name="ss-globalException" options="" />
       <module name="ss-rabbitMq" options="" />

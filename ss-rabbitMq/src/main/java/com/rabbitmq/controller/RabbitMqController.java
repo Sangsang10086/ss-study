@@ -33,12 +33,16 @@ public class RabbitMqController {
     public Result<Object> SendQueue(@RequestParam("exchange") String exchange,
                           @RequestParam("routingKey") String routingKey,
                           @RequestParam("data") Object data,
-                          @RequestParam("delay") String delay){
+                          @RequestParam(value = "delay", required = false) String delay){
         logger.info("==== 开始发送消息 ====");
-        rabbitTemplate.convertAndSend(exchange, routingKey, Result.success(data), message -> {
-            message.getMessageProperties().setDelayLong(Long.valueOf(delay));
-            return message;
-        });
+        if(delay == null){
+            rabbitTemplate.convertAndSend(exchange, routingKey, Result.success(data));
+        }else{
+            rabbitTemplate.convertAndSend(exchange, routingKey, Result.success(data), message -> {
+                message.getMessageProperties().setDelayLong(Long.valueOf(delay));
+                return message;
+            });
+        }
         return Result.success("发送成功",data);
     }
 }
