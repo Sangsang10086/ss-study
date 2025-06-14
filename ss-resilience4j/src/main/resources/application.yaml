@@ -16,6 +16,15 @@
 #
 ## reslience4j
 #resilience4j:
+#  retry: # 重试
+#    configs:
+#      default:
+#        max-attempts: 3 # 最大重试次数
+#        wait-duration: 1000ms # 固定的重试间隔
+#        retry-exceptions:
+#          - java.lang.Exception
+#
+#
 #  thread-pool-bulkhead: #  线程池隔离
 #    configs:
 #      default:

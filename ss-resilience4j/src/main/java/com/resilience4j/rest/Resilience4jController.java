@@ -5,22 +5,29 @@ import com.resilience4j.openfeign.RabbitMqClient;
 import io.github.resilience4j.bulkhead.annotation.Bulkhead;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/resilience4j")
 public class Resilience4jController {
     private static final Logger logger = LoggerFactory.getLogger(Resilience4jController.class);
+
+
+    /**
+     * 执行顺序： Retry ( CircuitBreaker ( RateLimiter ( TimeLimiter ( Bulkhead ( Function ) ) ) ) )
+     */
+
+
+
 
     @Autowired
     private RabbitMqClient rabbitMqClient;
@@ -125,13 +132,52 @@ public class Resilience4jController {
      */
     @RequestMapping(value = "/RateLimiter",method = RequestMethod.GET)
     @RateLimiter(name = "resilience4j-service",fallbackMethod = "RateLimiterFallback")
-    public String resilience4jRateLimiter(){
+    public String RateLimiter(){
         return "success";
     }
 
     public String RateLimiterFallback(Throwable throwable) {            //注意值只携带一个参数即可，参数为Throwable
         return "你被限流了，禁止访问/(ㄒoㄒ)/~~";
     }
+
+
+
+    /**
+     * 《 超时策略 》
+     * 针对controller来进行的timeLimiter fallback
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "/TimeLimiter",method = RequestMethod.GET)
+    @RateLimiter(name = "resilience4j-service",fallbackMethod = "TimeLimiterFallback")
+    public String TimeLimiter(){
+        return "success";
+    }
+
+    public String TimeLimiterFallback(Throwable throwable) {            //注意值只携带一个参数即可，参数为Throwable
+        return "你超时了，禁止访问/(ㄒoㄒ)/~~";
+    }
+
+
+    /**
+     * 《 重试策略 》
+     * 针对controller来进行的retry fallback
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping(value = "/TimeLimiter",method = RequestMethod.GET)
+    @Retry(name = "resilience4j-service",fallbackMethod = "retryFallback")
+    public String retry(){
+        return "success";
+    }
+
+    public String retryFallback(Throwable throwable) {            //注意值只携带一个参数即可，参数为Throwable
+        return "重试失败";
+    }
+
+
+
+
 
 
 }
