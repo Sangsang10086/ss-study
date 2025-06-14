@@ -14,11 +14,13 @@
         <option value="$PROJECT_DIR$/ss-gateWay/pom.xml" />
         <option value="$PROJECT_DIR$/ss-commons/pom.xml" />
         <option value="$PROJECT_DIR$/ss-commons/common-rabbit-mq-listenner/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-resilience4j/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/ss-commons/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-hystrix/pom.xml" />
       </set>
     </option>
   </component>

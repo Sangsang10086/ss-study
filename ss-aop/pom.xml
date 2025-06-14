@@ -105,11 +105,11 @@
         </dependency>
 
 <!--        导入rabbitmq模块-->
-        <dependency>
-            <groupId>com.rabbitMq</groupId>
-            <artifactId>ss-rabbitMq</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.rabbitMq</groupId>-->
+<!--            <artifactId>ss-rabbitMq</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 

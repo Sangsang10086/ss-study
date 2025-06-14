@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ss-aop" />
         <module name="ss-globalException" />
+        <module name="ss-resilience4j" />
         <module name="ss-thread" />
         <module name="ss-redis" />
         <module name="ss-gateWay" />
@@ -19,6 +20,7 @@
     <bytecodeTargetLevel target="17">
       <module name="common-rabbitmq-listener" target="17" />
       <module name="ss-commons" target="17" />
+      <module name="ss-hystrix" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -30,6 +32,7 @@
       <module name="ss-globalException" options="" />
       <module name="ss-rabbitMq" options="" />
       <module name="ss-redis" options="" />
+      <module name="ss-resilience4j" options="" />
       <module name="ss-thread" options="" />
       <module name="ss-xxlJob" options="" />
     </option>

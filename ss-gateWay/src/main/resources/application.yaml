@@ -38,6 +38,12 @@
 #          filters:
 #            - StripPrefix=1
 #
+#        - id: hystrix-service
+#          uri: lb://hystrix-service
+#          predicates:
+#            - Path=/api/hystrix/**
+#          filters:
+#            - StripPrefix=1
 #server:
 #  port: 8080
 #

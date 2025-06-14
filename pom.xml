@@ -17,6 +17,7 @@
         <module>ss-xxlJob</module>
         <module>ss-globalException</module>
         <module>ss-gateWay</module>
+        <module>ss-resilience4j</module>
     </modules>
 
     <properties>
