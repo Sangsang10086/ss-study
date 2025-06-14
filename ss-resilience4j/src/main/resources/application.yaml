@@ -1,0 +1,109 @@
+#spring:
+#  cloud:
+#    openfeign:
+#      client:
+#        config:
+#          default:
+#            # 指定最大超时时间3s→20s:
+#            read-timeout: 20000
+#            # 指定连接最大时间3s→20s
+#            connect-timeout: 20000
+#      circuitbreaker:
+#        enabled: true
+#        group:
+#          enabled: true # 默认不开启分组。优先级（精确、分组、默认）
+#
+#
+## reslience4j
+#resilience4j:
+#  thread-pool-bulkhead: #  线程池隔离
+#    configs:
+#      default:
+#        core-thread-pool-size: 2  # 核心线程数 设置为1表示线程池中始终保持一个线程运行。
+#        max-thread-pool-size: 2 # 最大线程数，设置为1表示即使在负载增加的情况下，线程池也不会扩展超过一个线程。
+#        queue-capacity: 0 #  队列容量，设置为1表示当所有核心线程都在处理任务时，队列可以额外保存一个任务等待执行
+#    instances: # 熔断实例
+#      resilience4j-service:
+#        base-config: default
+#
+#
+#  ratelimiter: #  限流
+#    configs:
+#      default:
+#        limit-for-period: 2  #在一次刷新周期内，允许执行的最大请求数
+#        limit-refresh-period: 10s  # 限流器每隔limitRefreshPeriod刷新一次，将允许处理的最大请求数量重置为limitForPeriod
+#        timeout-duration: 1s  # 线程等待权限的默认等待时间
+#    instances: # 熔断实例
+#      resilience4j-service:
+#        base-config: default
+#
+#
+#  bulkhead: # 隔离
+#    configs:
+#      default:
+#        max-concurrent-calls: 2  # 隔离允许并发线程执行的最大数量
+#        max-wait-duration: 1s # 当达到并发调用数量时，新的线程的阻塞时间，我只愿意等待1秒，过时不候进舱壁兜底fallback
+#    instances: # 熔断实例
+#      resilience4j-service:
+#        base-config: default
+#
+#
+#  timelimiter: #  超时
+#    configs:
+#      default:
+#        timeout-duration: 20s #神坑的位置，timelimiter 默认限制远程1s，超于1s就超时异常，配置了降级，就走降级逻辑
+#    instances: # 熔断实例
+#      resilience4j-service:
+#        base-config: default
+#
+#
+#  circuitbreaker: # 熔断
+#    configs:
+#      default:
+#        # 设置50%的调用失败时打开断路器，超过失败请求百分比，CircuitBreaker变为OPEN状态，并进行服务降级
+#        failure-rate-threshold: 50
+#
+#        # 断路器把调用时间大于slowCallDurationThreshold的调用视为慢调用，超过比例50%的调用失败时打开断路器并进行服务降级
+#        slow-call-rate-threshold: 50
+#
+#        # 配置调用时间的阈值，高于该阈值的呼叫视为慢调用，并增加慢调用比例
+#        slow-call-duration-threshold: 2s
+#
+#        # 断路器在半开状态下允许通过的调用次数。
+#        permitted-number-of-calls-in-half-open-state: 2
+#
+#        # 半开状态下允许的最长等待时间，默认值10。如果其中任意一个请求失败，将重新进入开启状态
+#        max-wait-duration-in-half-open-state: 5s
+#
+#        # 滑动窗口类型 如果滑动窗口类型是COUNT_BASED，将会统计记录最近slidingWindowSize次调用的结果。如果是TIME_BASED，将会统计记录最近slidingWindowSize秒的调用结果。
+#        sliding-window-type: COUNT_BASED
+#
+#        # 缓动窗口配置，COUNT_BASED 6 表示6个请求，配置TIME_BASED 6 表示6s
+#        sliding-window-size: 6
+#
+#        # 断路器最小样本（6，表示至少计算6个样本，才计算调用失败）
+#        minimum-number-of-calls: 6
+#
+#        # 从OPEN到HALF_OPEN需要等待的时间
+#        wait-duration-in-open-state: 5s
+#
+#        # 是否启用半开状态，默认为true
+#        automatic-transition-from-open-to-half-open-enabled: true
+#
+#        # 捕获的异常种类
+#        record-exceptions:
+#          - java.lang.Exception
+#
+#    instances: # 熔断实例
+#      resilience4j-service:
+#        base-config: default
+#
+#
+#
+#server:
+#  port: 7009
+#
+#
+#logging:
+#  level:
+#    com.resilience4j.*: info
