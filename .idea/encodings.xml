@@ -9,6 +9,8 @@
     <file url="file://$PROJECT_DIR$/ss-commons/common-rabbitmq-listener/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-commons/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-commons/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-easyExcel/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-easyExcel/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-gateWay/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-gateWay/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-globalException/src/main/java" charset="UTF-8" />

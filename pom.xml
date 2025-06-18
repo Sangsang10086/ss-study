@@ -18,6 +18,7 @@
         <module>ss-globalException</module>
         <module>ss-gateWay</module>
         <module>ss-resilience4j</module>
+        <module>ss-easyExcel</module>
     </modules>
 
     <properties>

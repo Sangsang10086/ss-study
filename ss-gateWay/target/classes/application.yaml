@@ -38,10 +38,18 @@
 #          filters:
 #            - StripPrefix=1
 #
-#        - id: hystrix-service
-#          uri: lb://hystrix-service
+#        - id: resilience4j-service
+#          uri: lb://resilience4j-service
 #          predicates:
-#            - Path=/api/hystrix/**
+#            - Path=/api/resilience4j/**
+#          filters:
+#            - StripPrefix=1
+#
+#
+#        - id: easyExcel-service
+#          uri: lb://easyExcel-service
+#          predicates:
+#            - Path=/api/easyExcel/**
 #          filters:
 #            - StripPrefix=1
 #server:
