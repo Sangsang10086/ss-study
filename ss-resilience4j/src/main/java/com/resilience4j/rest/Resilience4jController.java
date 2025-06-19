@@ -165,7 +165,7 @@ public class Resilience4jController {
      * @return
      * @throws Exception
      */
-    @RequestMapping(value = "/TimeLimiter",method = RequestMethod.GET)
+    @RequestMapping(value = "/Retry",method = RequestMethod.GET)
     @Retry(name = "resilience4j-service",fallbackMethod = "retryFallback")
     public String retry(){
         return "success";
