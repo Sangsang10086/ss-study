@@ -1,7 +1,7 @@
 package com.aop.controller;
 
 import com.aop.biz.LoggerBiz;
-import com.aop.entity.Result;
+import com.common.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

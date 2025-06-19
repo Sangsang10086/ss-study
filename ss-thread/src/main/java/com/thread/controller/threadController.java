@@ -1,7 +1,8 @@
 package com.thread.controller;
 
+import com.common.result.Result;
 import com.thread.biz.ThreadBiz;
-import com.thread.entity.Result;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class threadController {
     private ThreadBiz threadBiz;
 
     @RequestMapping(value = "/sendMsg",method = RequestMethod.POST)
-    public Result<String> sendMsg(@RequestParam("email") String email, @RequestParam("data") String data){
+    public Result<Object> sendMsg(@RequestParam("email") String email, @RequestParam("data") String data){
         logger.info("注册成功邮件发送中...");
         //异步处理中间操作-手动处理第一个线程
         threadBiz.test1(email);

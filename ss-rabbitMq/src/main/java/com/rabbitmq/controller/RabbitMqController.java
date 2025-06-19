@@ -1,7 +1,7 @@
 package com.rabbitmq.controller;
 
+import com.common.result.Result;
 import com.rabbitmq.config.RabbitMqConfig;
-import com.rabbitmq.entity.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
@@ -31,9 +31,9 @@ public class RabbitMqController {
      */
     @RequestMapping(value = "/MqSender", method = RequestMethod.POST)
     public Result<Object> SendQueue(@RequestParam("exchange") String exchange,
-                          @RequestParam("routingKey") String routingKey,
-                          @RequestParam("data") Object data,
-                          @RequestParam(value = "delay", required = false) String delay){
+                                    @RequestParam("routingKey") String routingKey,
+                                    @RequestParam("data") Object data,
+                                    @RequestParam(value = "delay", required = false) String delay){
         logger.info("==== 开始发送消息 ====");
         if(delay == null){
             rabbitTemplate.convertAndSend(exchange, routingKey, Result.success(data));

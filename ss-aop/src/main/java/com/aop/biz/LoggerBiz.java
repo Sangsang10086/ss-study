@@ -1,8 +1,8 @@
 package com.aop.biz;
 
-import com.aop.entity.Result;
 import com.aop.handle.Loggable;
 import com.aop.openfeign.RabbitMqClient;
+import com.common.result.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

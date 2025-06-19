@@ -112,6 +112,12 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
+<!--        导入公共模块api-->
+        <dependency>
+            <groupId>com.common</groupId>
+            <artifactId>ss-common-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
 
