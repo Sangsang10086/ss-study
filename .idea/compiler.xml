@@ -7,7 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ss-common-api" />
         <module name="ss-aop" />
+        <module name="ss-auth" />
+        <module name="ss-common" />
         <module name="ss-globalException" />
         <module name="ss-resilience4j" />
         <module name="ss-easyExcel" />
@@ -28,6 +31,8 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-rabbitmq-listener" options="" />
       <module name="ss-aop" options="" />
+      <module name="ss-common" options="" />
+      <module name="ss-common-api" options="" />
       <module name="ss-commons" options="" />
       <module name="ss-easyExcel" options="" />
       <module name="ss-gateWay" options="" />

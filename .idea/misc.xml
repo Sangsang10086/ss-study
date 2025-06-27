@@ -16,6 +16,8 @@
         <option value="$PROJECT_DIR$/ss-commons/common-rabbit-mq-listenner/pom.xml" />
         <option value="$PROJECT_DIR$/ss-resilience4j/pom.xml" />
         <option value="$PROJECT_DIR$/ss-easyExcel/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-common-api/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-common/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -19,6 +19,8 @@
         <module>ss-gateWay</module>
         <module>ss-resilience4j</module>
         <module>ss-easyExcel</module>
+        <module>ss-auth</module>
+        <module>ss-common</module>
     </modules>
 
     <properties>

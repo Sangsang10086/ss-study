@@ -5,6 +5,12 @@
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-aop/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-aop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-auth/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-auth/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-common-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-common-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-commons/common-rabbitmq-listener/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-commons/common-rabbitmq-listener/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-commons/src/main/java" charset="UTF-8" />

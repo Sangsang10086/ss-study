@@ -35,7 +35,8 @@ public class GlobalFilterConfig {
                     .then(Mono.fromRunnable(()->{
                         //后置处理
                         long duration = System.currentTimeMillis() - startTime;
-                        logger.info("方法 {} 花费 {} ms", exchange.getRequest().getURI(), duration);
+                        logger.info("方法 {} 花费 {} ms，发送到了{}",
+                                exchange.getRequest().getURI(), duration,exchange.getAttribute("gatewayRoute"));
                     }));
         };
     }

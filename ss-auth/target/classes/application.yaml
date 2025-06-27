@@ -1,0 +1,14 @@
+#jwt:
+#  secret-key: 7gB03oXq9sT1wW2nKz8vFjEaQbLmZrNtUxYp
+#  expiration-time: 36000000  # 10小时（单位：毫秒）
+#
+#
+#spring:
+#  # 数据源
+#  datasource:
+#    username: root
+#    password: 123456
+#    url: jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+#
+#server:
+#  port: 7012
