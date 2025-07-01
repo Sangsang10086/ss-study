@@ -1,9 +1,11 @@
 package com.common.biz;
 
-import com.common.biz.around.ABaseBiz;
+import com.baomidou.mybatisplus.core.mapper.Mapper;
 import org.springframework.stereotype.Service;
 
 @Service
-public abstract class BaseBiz<T> extends ABaseBiz<T> {
+public abstract class BaseBiz<M extends Mapper<T>, T> {
+
+    protected M mapper;
 
 }

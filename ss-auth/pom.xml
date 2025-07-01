@@ -79,6 +79,11 @@
             <version>5.8.27</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>4.4.0</version>
+        </dependency>
         <!--        nacos-->
         <!--        服务配置-->
         <dependency>
@@ -122,7 +127,8 @@
             <artifactId>jjwt-jackson</artifactId>
             <version>0.11.5</version>
         </dependency>
-<!--        定义引入公共模块-->
+
+        <!--        定义引入公共模块-->
         <dependency>
             <groupId>com.common</groupId>
             <artifactId>ss-common-api</artifactId>

@@ -1,7 +1,9 @@
 package com.aop.biz;
 
 import com.aop.handle.Loggable;
+import com.aop.openfeign.AuthClient;
 import com.aop.openfeign.RabbitMqClient;
+import com.common.auth.AuthenticationRequest;
 import com.common.result.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,11 +17,15 @@ public class LoggerBiz {
     @Autowired
     private RabbitMqClient rabbitMqClient;
 
+    @Autowired
+    private AuthClient authClient;
+
     @Loggable
     public Result<Object> logger() throws InterruptedException {
         logger.info("==== 方法体 ====");
         String data = "hello world";
-        rabbitMqClient.sendQueue("direct.exchange", "hello-key", data,"1000");
+//        rabbitMqClient.sendQueue("direct.exchange", "hello-key", data,"1000");
+        authClient.login(new AuthenticationRequest("admin", "123456"));
         Thread.sleep(2000);
         return Result.success(data);
     }
