@@ -1,6 +1,7 @@
 #jwt:
-#  secret-key: 7gB03oXq9sT1wW2nKz8vFjEaQbLmZrNtUxYp
-#  expiration-time: 36000000  # 10小时（单位：毫秒）
+#  issuer: com.auth
+#  secret: 7gB03oXq9sT1wW2nKz8vFjEaQbLmZrNtUxYp
+#  expiration: 60
 #
 #
 #spring:

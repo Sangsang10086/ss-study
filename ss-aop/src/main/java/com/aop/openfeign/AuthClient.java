@@ -7,6 +7,7 @@ import com.common.result.Result;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -23,8 +24,9 @@ public interface AuthClient {
 
     /**
      * 验证token
+     * @param token 从header中提取的token字符串
      * @return
      */
-    @RequestMapping(value = "/auth/verify", method = RequestMethod.GET)
-    TokenVerifyResult verify(HttpServletRequest request);
+    @RequestMapping(value = "/auth/verify", method = RequestMethod.POST)
+    TokenVerifyResult verify(String token);
 }

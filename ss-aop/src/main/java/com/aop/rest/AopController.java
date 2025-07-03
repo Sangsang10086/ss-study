@@ -1,6 +1,7 @@
-package com.aop.controller;
+package com.aop.rest;
 
 import com.aop.biz.LoggerBiz;
+import com.common.filter.IgnoreToken;
 import com.common.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,8 +15,9 @@ public class AopController {
     @Autowired
     private LoggerBiz loggerBiz;
 
+//    @IgnoreToken
     @RequestMapping(value = "/logger",method = RequestMethod.GET)
     public Result<Object> aop() throws InterruptedException {
-        return Result.success(loggerBiz.logger());
+        return loggerBiz.logger();
     }
 }

@@ -56,13 +56,7 @@ public class AuthController {
         return Result.success("登录成功", token);
     }
     @RequestMapping(value = "/verify", method = RequestMethod.POST)
-    public TokenVerifyResult verify(HttpServletRequest  request) {
-        String token = null;
-        String bearerToken = request.getHeader("Authorization");
-        if (bearerToken != null && bearerToken.startsWith("Bearer ")) {
-            token =  bearerToken.substring(7);
-        }
-
+    public TokenVerifyResult verify(String token) {
         TokenVerifyResult result = new TokenVerifyResult();
         if (token != null && jwtUtil.validateToken(token)) {
             String username = jwtUtil.getUsernameFromToken(token);

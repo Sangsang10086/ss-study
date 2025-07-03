@@ -20,12 +20,11 @@ public class LoggerBiz {
     @Autowired
     private AuthClient authClient;
 
-    @Loggable
+//    @Loggable
     public Result<Object> logger() throws InterruptedException {
         logger.info("==== 方法体 ====");
         String data = "hello world";
 //        rabbitMqClient.sendQueue("direct.exchange", "hello-key", data,"1000");
-        authClient.login(new AuthenticationRequest("admin", "123456"));
         Thread.sleep(2000);
         return Result.success(data);
     }

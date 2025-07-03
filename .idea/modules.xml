@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ss-auth/ss-auth.iml" filepath="$PROJECT_DIR$/ss-auth/ss-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/ss-Hystrix/ss-hystrix.iml" filepath="$PROJECT_DIR$/ss-Hystrix/ss-hystrix.iml" />
     </modules>
   </component>

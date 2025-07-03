@@ -21,28 +21,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
-
-    @Autowired
-    private UserDetailsService userDetailsService;
-
-    @Autowired
-    private JwtUtil jwtUtil;
-
-//    @Bean
-//    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-//        http
-//                .csrf(AbstractHttpConfigurer::disable)
-//                .authorizeHttpRequests(authorizeRequests ->
-//                        authorizeRequests
-//                                .requestMatchers("/auth/login").permitAll()
-//                                .anyRequest().authenticated()
-//                )
-//                .addFilterBefore(new JwtAuthenticationFilter(jwtUtil, userDetailsService),
-//                        UsernamePasswordAuthenticationFilter.class);
-//        return http.build();
-//    }
-
-
     @Bean
     public AuthenticationManager authenticationManager(
             AuthenticationConfiguration authenticationConfiguration) throws Exception {
@@ -54,20 +32,4 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-
-    /**
-     * 跨域配置  前端直接访问这个微服务需要配置
-     */
-//    @Bean
-//    public CorsConfigurationSource corsConfigurationSource() {
-//        CorsConfiguration config = new CorsConfiguration();
-//        config.addAllowedOrigin("http://localhost:8080/"); // 允许的源
-//        config.setAllowCredentials(true); // 是否允许发送凭证（如 cookies）
-//        config.addAllowedMethod("*"); // 允许的方法
-//        config.addAllowedHeader("*"); // 允许的头
-//        config.addExposedHeader("*");
-//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//        source.registerCorsConfiguration("/**", config);
-//        return source;
-//    }
 }
