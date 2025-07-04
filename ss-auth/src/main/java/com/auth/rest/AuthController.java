@@ -4,6 +4,7 @@ import com.auth.biz.AuthBiz;
 import com.auth.entity.User;
 import com.auth.util.JwtUtil;
 import com.common.auth.AuthenticationRequest;
+import com.common.auth.AuthenticationResponse;
 import com.common.auth.TokenVerifyResult;
 import com.common.rest.BaseController;
 import com.common.result.Result;
@@ -37,8 +38,8 @@ public class AuthController extends BaseController<AuthBiz, User> {
     }
 
     //    用户登录
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Result login(@RequestBody AuthenticationRequest authenticationRequest) {
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public AuthenticationResponse login(@RequestBody AuthenticationRequest authenticationRequest) {
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword());
         // 认证
@@ -52,8 +53,10 @@ public class AuthController extends BaseController<AuthBiz, User> {
         Map<String, String> map = new HashMap<>();
         map.put("username", user.getUsername());
         String token = jwtUtil.generateToken(map);
+        AuthenticationResponse authenticationResponse = new AuthenticationResponse();
+        authenticationResponse.setToken(token);
 
-        return Result.success("登录成功", token);
+        return authenticationResponse;
     }
     @RequestMapping(value = "/verify", method = RequestMethod.POST)
     public TokenVerifyResult verify(String token) {

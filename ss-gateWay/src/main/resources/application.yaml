@@ -60,6 +60,14 @@
 #          filters:
 #            - StripPrefix=1
 #
+#        - id: allInto-service
+#          uri: lb://allInto-service
+#          predicates:
+#            - Path=/api/allInto/**
+#          filters:
+#            - StripPrefix=1
+#
+#
 #
 #server:
 #  port: 8080

@@ -8,11 +8,11 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.aop</groupId>
-    <artifactId>ss-aop</artifactId>
+    <groupId>com.allInto</groupId>
+    <artifactId>all-into</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ss-aop</name>
-    <description>ss-aop</description>
+    <name>all-into</name>
+    <description>all-into</description>
     <url/>
     <licenses>
         <license/>
@@ -72,38 +72,33 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.27</version>
         </dependency>
-        <!--        AOP-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
         <!--        nacos-->
-<!--        服务配置-->
+        <!--        服务配置-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
-<!--        服务发现-->
+        <!--        服务发现-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
-<!--        bootstrap文件-->
+        <!--        bootstrap文件-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
-<!--        负载均衡-->
+        <!--        负载均衡-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
-<!--        openfeign-->
+        <!--        openfeign-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-<!--        导入公共api-->
+        <!--        导入公共api-->
         <dependency>
             <groupId>com.common</groupId>
             <artifactId>ss-common-api</artifactId>
@@ -122,20 +117,18 @@
             <scope>compile</scope>
         </dependency>
 
-<!--        导入rabbitmq模块-->
-<!--        <dependency>-->
-<!--            <groupId>com.rabbitMq</groupId>-->
-<!--            <artifactId>ss-rabbitMq</artifactId>-->
-<!--            <version>0.0.1-SNAPSHOT</version>-->
-<!--        </dependency>-->
+<!--    导入rabbitmq模块-->
+        <dependency>
+            <groupId>com.rabbitMq</groupId>
+            <artifactId>ss-rabbitMq</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>com.auth</groupId>
             <artifactId>ss-auth</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
     </dependencies>
-
 
     <build>
         <plugins>

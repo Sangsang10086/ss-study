@@ -21,6 +21,7 @@
         <module>ss-easyExcel</module>
         <module>ss-auth</module>
         <module>ss-common</module>
+        <module>all-into</module>
     </modules>
 
     <properties>
