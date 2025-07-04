@@ -1,9 +1,7 @@
 package com.aop.biz;
 
-import com.aop.handle.Loggable;
-import com.aop.openfeign.AuthClient;
 import com.aop.openfeign.RabbitMqClient;
-import com.common.auth.AuthenticationRequest;
+import com.auth.openfeign.AuthClient;
 import com.common.result.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

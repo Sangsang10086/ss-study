@@ -1,13 +1,11 @@
-package com.aop.openfeign;
+package com.auth.openfeign;
 
 import com.common.auth.AuthenticationRequest;
 
 import com.common.auth.TokenVerifyResult;
 import com.common.result.Result;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 

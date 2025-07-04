@@ -1,9 +1,8 @@
 package com.redis.mapper;
 
-import com.redis.po.Teacher;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.common.redis.Redis;
 import org.apache.ibatis.annotations.Mapper;
-
 /**
  * <p>
  *  Mapper 接口
@@ -13,6 +12,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @since 2025-06-06
  */
 @Mapper
-public interface TeacherMapper extends BaseMapper<Teacher> {
+public interface RedisMapper extends BaseMapper<Redis> {
 
 }

@@ -1,5 +1,8 @@
 package com.redis.biz;
 
+import com.common.biz.BaseBiz;
+import com.common.redis.Redis;
+import com.redis.mapper.RedisMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
@@ -7,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class RedisService {           //创建一个 Redis 服务类来封装 Redis 操作
+public class RedisBiz extends BaseBiz<RedisMapper, Redis> {           //创建一个 Redis 服务类来封装 Redis 操作
 
 
     /**
@@ -19,7 +22,7 @@ public class RedisService {           //创建一个 Redis 服务类来封装 Re
     private RedisTemplate<String, Object> redisTemplate;
 
     @Autowired
-    public RedisService(RedisTemplate<String, Object> redisTemplate) {
+    public RedisBiz(RedisTemplate<String, Object> redisTemplate) {
         this.redisTemplate = redisTemplate;
     }
 

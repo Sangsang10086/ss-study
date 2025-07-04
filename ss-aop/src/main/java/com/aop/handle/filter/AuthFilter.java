@@ -1,6 +1,6 @@
 package com.aop.handle.filter;
 
-import com.aop.openfeign.AuthClient;
+import com.auth.openfeign.AuthClient;
 import com.common.auth.TokenVerifyResult;
 import com.common.filter.IgnoreToken;
 import jakarta.servlet.*;

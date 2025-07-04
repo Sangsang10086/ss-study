@@ -5,6 +5,7 @@ import com.auth.entity.User;
 import com.auth.util.JwtUtil;
 import com.common.auth.AuthenticationRequest;
 import com.common.auth.TokenVerifyResult;
+import com.common.rest.BaseController;
 import com.common.result.Result;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,11 +22,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/auth")
-public class AuthController {
+public class AuthController extends BaseController<AuthBiz, User> {
 
     @Autowired
     private UserDetailsService userDetailsService;
-
 
     private final AuthenticationManager authenticationManager;
 
