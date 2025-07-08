@@ -38,7 +38,7 @@ public class AuthController extends BaseController<AuthBiz, User> {
     }
 
     //    用户登录
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public AuthenticationResponse login(@RequestBody AuthenticationRequest authenticationRequest) {
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(authenticationRequest.getUsername(), authenticationRequest.getPassword());

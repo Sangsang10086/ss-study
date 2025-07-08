@@ -118,15 +118,21 @@
         </dependency>
 
 <!--    导入rabbitmq模块-->
-        <dependency>
-            <groupId>com.rabbitMq</groupId>
-            <artifactId>ss-rabbitMq</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.rabbitMq</groupId>-->
+<!--            <artifactId>ss-rabbitMq</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>com.auth</groupId>
             <artifactId>ss-auth</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>*</artifactId>
+                    <groupId>*</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

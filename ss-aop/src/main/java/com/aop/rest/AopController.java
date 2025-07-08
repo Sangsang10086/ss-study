@@ -1,7 +1,6 @@
 package com.aop.rest;
 
 import com.aop.biz.LoggerBiz;
-import com.common.filter.IgnoreToken;
 import com.common.result.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

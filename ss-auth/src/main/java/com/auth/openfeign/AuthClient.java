@@ -4,7 +4,6 @@ import com.common.auth.AuthenticationRequest;
 
 import com.common.auth.AuthenticationResponse;
 import com.common.auth.TokenVerifyResult;
-import com.common.result.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,8 +17,8 @@ public interface AuthClient {
      * @param authenticationRequest
      * @return
      */
-    @RequestMapping(value = "/auth/login", method = RequestMethod.GET)
-    AuthenticationResponse login(@RequestBody AuthenticationRequest authenticationRequest);
+    @RequestMapping(value = "/auth/login", method = RequestMethod.POST)
+    AuthenticationResponse login(AuthenticationRequest authenticationRequest);
 
     /**
      * 验证token
