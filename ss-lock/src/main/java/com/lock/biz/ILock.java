@@ -1,6 +1,10 @@
 package com.lock.biz;
 
-public interface ILock extends AutoCloseable{
+import org.springframework.stereotype.Service;
+
+
+@Service
+public interface ILock extends AutoCloseable{       // { Redis实现分布式锁的接口 }
     /**
      * 尝试获取锁
      *
