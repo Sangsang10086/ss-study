@@ -19,6 +19,8 @@
         <option value="$PROJECT_DIR$/ss-common-api/pom.xml" />
         <option value="$PROJECT_DIR$/ss-common/pom.xml" />
         <option value="$PROJECT_DIR$/all-into/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-webSocket/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-lock/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

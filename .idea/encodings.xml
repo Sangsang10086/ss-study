@@ -25,6 +25,7 @@
     <file url="file://$PROJECT_DIR$/ss-globalException/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-hystrix/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-hystrix/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-lock/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-rabbitMq/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-rabbitMq/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-redis/src/main/java" charset="UTF-8" />
@@ -33,6 +34,8 @@
     <file url="file://$PROJECT_DIR$/ss-resilience4j/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-thread/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-thread/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-webSocket/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-webSocket/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-xxlJob/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-xxlJob/src/main/resources" charset="UTF-8" />
   </component>

@@ -14,7 +14,9 @@
         <module name="ss-easyExcel" />
         <module name="ss-thread" />
         <module name="ss-xxlJob" />
+        <module name="ss-lock" />
         <module name="ss-aop" />
+        <module name="ss-webSocket" />
         <module name="ss-globalException" />
         <module name="ss-resilience4j" />
         <module name="ss-redis" />
@@ -39,10 +41,12 @@
       <module name="ss-easyExcel" options="" />
       <module name="ss-gateWay" options="" />
       <module name="ss-globalException" options="" />
+      <module name="ss-lock" options="-parameters" />
       <module name="ss-rabbitMq" options="" />
       <module name="ss-redis" options="" />
       <module name="ss-resilience4j" options="" />
       <module name="ss-thread" options="" />
+      <module name="ss-webSocket" options="-parameters" />
       <module name="ss-xxlJob" options="" />
     </option>
   </component>

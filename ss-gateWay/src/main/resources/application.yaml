@@ -67,6 +67,15 @@
 #          filters:
 #            - StripPrefix=1
 #
+#        - id: webSocket-service
+#          uri: lb://webSocket-service
+#          predicates:
+#            - Path=/api/webSocket/**
+#          filters:
+#            - StripPrefix=1
+#
+#
+#
 #
 #
 #server:
