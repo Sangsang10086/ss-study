@@ -26,11 +26,13 @@ public class Resilience4jController {
      * 执行顺序： Retry ( CircuitBreaker ( RateLimiter ( TimeLimiter ( Bulkhead ( Function ) ) ) ) )
      */
 
-
-
-
     @Autowired
     private RabbitMqClient rabbitMqClient;
+
+
+
+
+
 
     /**
      * 《 远程调用 熔断器 》
@@ -47,6 +49,13 @@ public class Resilience4jController {
     public Result<Object> openfeignFallback(Throwable throwable) {
         return Result.success("服务器异常");
     }
+
+
+
+
+
+
+
 
     /**
      * 《 熔断策略 》
@@ -65,6 +74,10 @@ public class Resilience4jController {
     public String Fallback(Throwable throwable) {            //注意值只携带一个参数即可，参数为Throwable
         return "Fallback response due to: " + throwable.getMessage();
     }
+
+
+
+
 
 
     /**
@@ -96,6 +109,8 @@ public class Resilience4jController {
 
 
 
+
+
     /**
      * 《 线程池 隔离策略 》
      * 针对controller来进行的bulkhead fallback
@@ -124,6 +139,10 @@ public class Resilience4jController {
     }
 
 
+
+
+
+
     /**
      * 《 限流策略 》
      * 针对controller来进行的rateLimiter fallback
@@ -142,6 +161,10 @@ public class Resilience4jController {
 
 
 
+
+
+
+
     /**
      * 《 超时策略 》
      * 针对controller来进行的timeLimiter fallback
@@ -157,6 +180,14 @@ public class Resilience4jController {
     public String TimeLimiterFallback(Throwable throwable) {            //注意值只携带一个参数即可，参数为Throwable
         return "你超时了，禁止访问/(ㄒoㄒ)/~~";
     }
+
+
+
+
+
+
+
+
 
 
     /**
