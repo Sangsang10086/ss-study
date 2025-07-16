@@ -4,11 +4,29 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Aspect
+
+/*
+1.同一个方法切点的不同切面中，使用Order来控制切面的执行顺序   ，若不定义的话默认是使用类名的首字母顺序来决定的
+
+2.也可以使用类来实现Ordered接口来实现getOrder接口，从而控制切面的执行顺序
+*/
+
+@Order(1)
 @Component
-public class LoggingAspect {
+public class LoggingAspect implements Ordered {
+    /*
+    除了使用@Order注解之外还可以实现接口来实现对切面顺序的控制
+    */
+    @Override
+    public int getOrder() {
+        return 0;
+    }
+
     private static final Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
 
     /**
@@ -72,8 +90,5 @@ public class LoggingAspect {
         logger.info("方法 {} 花费 {} ms", joinPoint.getSignature().getName(), duration);
         return result;
     }
-
-
-
 
 }
