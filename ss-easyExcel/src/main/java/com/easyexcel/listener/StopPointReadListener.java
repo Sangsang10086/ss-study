@@ -33,6 +33,11 @@ public class StopPointReadListener implements ReadListener<StopPoint> {
         teacherService.insertBeach(stopPoint);
     }
 
+
+
+
+
+
     /**
      * 读取完成后调用此方法
      * @param analysisContext
@@ -42,10 +47,21 @@ public class StopPointReadListener implements ReadListener<StopPoint> {
         logger.info("导入完成");
     }
 
+
+
+
+
+
+
     @Override
     public boolean hasNext(AnalysisContext context) {
         return ReadListener.super.hasNext(context);
     }
+
+
+
+
+
 
     /**
      * 解析异常时，会执行的方法
@@ -70,10 +86,23 @@ public class StopPointReadListener implements ReadListener<StopPoint> {
 
     }
 
+
+
+
+
+
+
+
     @Override
     public void invokeHead(Map<Integer, ReadCellData<?>> headMap, AnalysisContext context) {
         ReadListener.super.invokeHead(headMap, context);
     }
+
+
+
+
+
+
 
     @Override
     public void extra(CellExtra extra, AnalysisContext context) {
