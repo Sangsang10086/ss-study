@@ -14,7 +14,6 @@ public interface RabbitMqClient {
      * @param routingKey 路由key
      * @param data 数据
      * @param delay 延迟时间
-     * @return
      */
     @RequestMapping(value = "/rabbitMq/MqSender", method = RequestMethod.POST)
     public Result<Object> sendQueue(@RequestParam("exchange") String exchange,

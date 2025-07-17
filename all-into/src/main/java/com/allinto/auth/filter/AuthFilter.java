@@ -15,6 +15,9 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 
 import java.io.IOException;
 
+/**
+ * @author 10599
+ */
 @Order(1)
 @WebFilter(filterName = "AuthFilter", urlPatterns = "/*")
 public class AuthFilter implements Filter {
@@ -54,7 +57,8 @@ public class AuthFilter implements Filter {
                 }
                 TokenVerifyResult verify = authClient.verify(token);
                 if (verify != null && verify.isValid()) {
-                    filterChain.doFilter(servletRequest, servletResponse); // token 验证通过，放行
+                    // token 验证通过，放行
+                    filterChain.doFilter(servletRequest, servletResponse);
                 } else {
                     logger.info("token验证失败");
                 }
