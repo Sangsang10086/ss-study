@@ -3,6 +3,9 @@ package com.lock.biz;
 import org.springframework.stereotype.Service;
 
 
+/**
+ * @author 10599
+ */
 @Service
 public interface ILock extends AutoCloseable{       // { Redis实现分布式锁的接口 }
     /**

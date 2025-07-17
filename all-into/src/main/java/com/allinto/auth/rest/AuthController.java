@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author 10599
+ */
 @RestController
 @RequestMapping("/allInto")
 public class AuthController {
@@ -22,7 +25,7 @@ public class AuthController {
      */
     @IgnoreToken
     @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public String AuthTest(@RequestBody AuthenticationRequest authenticationRequest){
+    public String authTest(@RequestBody AuthenticationRequest authenticationRequest){
         AuthenticationResponse token = authClient.login(authenticationRequest);
         return token.getToken();
     }
