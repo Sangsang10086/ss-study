@@ -1,37 +1,39 @@
-spring:
-
-  # 数据源
-  datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-
-
-
-mybatis-plus:
-  configuration:
-    mapUnderscoreToCamelCase: true  # 自动将数据库下划线命名字段映射为实体类的驼峰命名属性。
-  mapper-locations: classpath*:mapper/**/*.xml # 指定 MyBatis 的 XML 映射文件位置，支持通配符匹配多路径下的 .xml 文件。
-
-
-#端口
-server:
-  port: 7005
-
-#日志级别
-logging:
-  level:
-    com.study.example.*: info
-
-#定时任务
-xxl:
-  job:
-    admin:
-      addresses: http://127.0.0.1:8888/xxl-job-admin
-    executor:
-      appName: xxl-job-executor-sample
-      port: 9999
-      logPath: /data/applogs/xxl-job/jobhandler
-      logRetentionDays: 30
-    accessToken: default_token
-
+#spring:
+#  application:
+#    name: xxlJob-service
+#
+#  # 数据源
+#  datasource:
+#    username: root
+#    password: 123456
+#    url: jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+#
+#
+#
+#mybatis-plus:
+#  configuration:
+#    mapUnderscoreToCamelCase: true  # 自动将数据库下划线命名字段映射为实体类的驼峰命名属性。
+#  mapper-locations: classpath*:mapper/**/*.xml # 指定 MyBatis 的 XML 映射文件位置，支持通配符匹配多路径下的 .xml 文件。
+#
+#
+##端口
+#server:
+#  port: 7004
+#
+##日志级别
+#logging:
+#  level:
+#    com.study.example.*: info
+#
+##定时任务
+#xxl:
+#  job:
+#    admin:
+#      addresses: http://127.0.0.1:8888/xxl-job-admin
+#    executor:
+#      appName: xxl-job-executor-sample
+#      port: 9999
+#      logPath: /data/applogs/xxl-job/jobhandler
+#      logRetentionDays: 30
+#    accessToken: default_token
+#

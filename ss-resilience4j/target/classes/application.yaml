@@ -14,19 +14,6 @@
 #          enabled: true # 默认不开启分组。优先级（精确、分组、默认）
 #
 #
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#  endpoint:
-#    prometheus:
-#      enabled: true  # 启用 Prometheus 端点
-#  prometheus:
-#    metrics:
-#      export:
-#        enabled: true
-#
 ## reslience4j
 #resilience4j:
 #  retry: # 重试

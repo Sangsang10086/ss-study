@@ -71,6 +71,11 @@
 #          uri: lb://webSocket-service
 #          predicates:
 #            - Path=/api/webSocket/**
+#            - Query=version,v2 # 仅匹配带version=v2参数的请求
+#            - Header=X-Client-Type,APP # 仅匹配带X-Client-Type=APP的请求
+#            - Method=GET # 仅匹配GET请求
+#            - After=2024-11-11T00:00:00+08:00 # 仅匹配2024-11-11之后的请求
+#            - Before=2024-11-11T24:00:00+08:00 # 24点自动失效
 #          filters:
 #            - StripPrefix=1
 #
