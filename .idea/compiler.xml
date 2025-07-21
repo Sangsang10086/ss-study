@@ -18,6 +18,7 @@
         <module name="ss-aop" />
         <module name="ss-webSocket" />
         <module name="ss-resilience4j" />
+        <module name="ss-ai" />
         <module name="ss-redis" />
         <module name="ss-gateWay" />
         <module name="ss-rabbitMq" />
@@ -34,6 +35,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="all-into" options="" />
       <module name="common-rabbitmq-listener" options="" />
+      <module name="ss-ai" options="" />
       <module name="ss-aop" options="" />
       <module name="ss-common" options="" />
       <module name="ss-common-api" options="" />

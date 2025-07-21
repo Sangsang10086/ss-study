@@ -23,6 +23,7 @@
         <module>ss-common</module>
         <module>all-into</module>
         <module>ss-webSocket</module>
+        <module>ss-ai</module>
     </modules>
 
     <properties>
