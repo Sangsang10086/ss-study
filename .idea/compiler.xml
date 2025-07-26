@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ss-http" />
         <module name="ss-common-api" />
         <module name="ss-auth" />
         <module name="ss-common" />
@@ -43,6 +44,7 @@
       <module name="ss-easyExcel" options="" />
       <module name="ss-gateWay" options="" />
       <module name="ss-globalException" options="" />
+      <module name="ss-http" options="" />
       <module name="ss-lock" options="-parameters" />
       <module name="ss-rabbitMq" options="" />
       <module name="ss-redis" options="" />

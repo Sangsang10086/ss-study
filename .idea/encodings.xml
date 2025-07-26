@@ -25,6 +25,8 @@
     <file url="file://$PROJECT_DIR$/ss-gateWay/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-globalException/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-globalException/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-http/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-http/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-hystrix/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-hystrix/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-lock/src/main/java" charset="UTF-8" />

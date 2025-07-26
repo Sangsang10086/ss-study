@@ -24,6 +24,7 @@
         <module>all-into</module>
         <module>ss-webSocket</module>
         <module>ss-ai</module>
+        <module>ss-http</module>
     </modules>
 
     <properties>

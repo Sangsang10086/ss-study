@@ -27,6 +27,7 @@
         <option value="$PROJECT_DIR$/ss-webSocket/pom.xml" />
         <option value="$PROJECT_DIR$/ss-lock/pom.xml" />
         <option value="$PROJECT_DIR$/ss-ai/pom.xml" />
+        <option value="$PROJECT_DIR$/ss-http/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

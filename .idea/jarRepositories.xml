@@ -2,9 +2,49 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="central-portal-snapshots" />
+      <option name="name" value="Central Portal Snapshots" />
+      <option name="url" value="https://central.sonatype.com/repository/maven-snapshots/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central-portal-snapshots" />
+      <option name="name" value="Central Portal Snapshots" />
+      <option name="url" value="https://my-company-repository.com/maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="aspose-repo" />
+      <option name="name" value="Aspose Repository" />
+      <option name="url" value="https://my-company-repository.com/maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="https://my-company-repository.com/maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-snapshots" />
+      <option name="name" value="Spring Snapshots" />
+      <option name="url" value="https://my-company-repository.com/maven" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="Maven Central repository" />
+      <option name="url" value="https://repo1.maven.org/maven2" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="aspose-repo" />
+      <option name="name" value="Aspose Repository" />
+      <option name="url" value="https://repository.aspose.com/repo/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="private-repo" />
+      <option name="name" value="Private Repository" />
+      <option name="url" value="https://my-company-repository.com/maven" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="aspose-repo" />
@@ -12,9 +52,19 @@
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="spring-snapshots" />
+      <option name="name" value="Spring Snapshots" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="central" />
-      <option name="name" value="Maven Central repository" />
-      <option name="url" value="https://repo1.maven.org/maven2" />
+      <option name="name" value="Central Repository" />
+      <option name="url" value="http://10.5.52.7:8181/repository/maven-public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="spring-snapshots" />
+      <option name="name" value="Spring Snapshots" />
+      <option name="url" value="https://repo.spring.io/snapshot" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="private-repo" />
@@ -29,16 +79,26 @@
     <remote-repository>
       <option name="id" value="private-repo" />
       <option name="name" value="Private Repository" />
+      <option name="url" value="http://10.5.52.7:8181/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="private-repo" />
+      <option name="name" value="Private Repository" />
       <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="aspose-repo" />
-      <option name="name" value="Aspose Repository" />
-      <option name="url" value="https://maven.aliyun.com/repository/central" />
+      <option name="id" value="central-portal-snapshots" />
+      <option name="name" value="Central Portal Snapshots" />
+      <option name="url" value="https://repo.maven.apache.org/maven2" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />
       <option name="name" value="Central Repository" />
+      <option name="url" value="https://maven.aliyun.com/repository/central" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="aspose-repo" />
+      <option name="name" value="Aspose Repository" />
       <option name="url" value="https://maven.aliyun.com/repository/central" />
     </remote-repository>
   </component>
