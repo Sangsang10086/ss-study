@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ai-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        file-extension: yaml
+        namespace: 0f08c325-5871-4bf9-a1ef-3935eb005691
+      discovery:
+        server-addr: localhost:8848
+        namespace: 0f08c325-5871-4bf9-a1ef-3935eb005691
+        username: nacos
+        password: nacos
