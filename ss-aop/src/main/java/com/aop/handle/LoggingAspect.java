@@ -8,7 +8,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Aspect
+
 
 /*
 1.同一个方法切点的不同切面中，使用Order来控制切面的执行顺序   ，若不定义的话默认是使用类名的首字母顺序来决定的
@@ -16,6 +16,8 @@ import org.springframework.stereotype.Component;
 2.也可以使用类来实现Ordered接口来实现getOrder接口，从而控制切面的执行顺序
 */
 
+
+@Aspect
 @Order(1)
 @Component
 public class LoggingAspect implements Ordered {
@@ -67,6 +69,9 @@ public class LoggingAspect implements Ordered {
         logger.info("==== 目标方法执行前执行 ====");
     }
 
+    /**
+     * 之前
+     */
     @After("loggableMethods()")
     public void beforeBizMethods1(){
         logger.info("==== 目标方法执行后执行（无论是否异常） ====");
