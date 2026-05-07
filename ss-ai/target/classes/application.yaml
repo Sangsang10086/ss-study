@@ -15,3 +15,28 @@
 #  level:
 #    com.ai.*: debug
 #
+# ... existing code ...
+spring:
+  ai:
+    vectorstore:
+      milvus:
+        client:
+          host: 127.0.0.1
+          port: 19530
+        collection-name: my_knowledge
+        embedding-dimension: 768
+        index-type: hnsw
+        metric-type: cosine
+        initialize-schema: true
+    ollama:
+      base-url: http://127.0.0.1:11434
+      embedding:
+        model: nomic-embed-text
+      chat:
+        model: qwen:0.5b
+        options:
+          num_ctx: 2048
+          temperature: 0.7
+    timeout:
+      connect: 30s
+      read: 120s

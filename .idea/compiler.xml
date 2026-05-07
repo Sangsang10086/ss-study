@@ -13,6 +13,7 @@
         <module name="ss-common" />
         <module name="all-into" />
         <module name="ss-easyExcel" />
+        <module name="ss-swagger" />
         <module name="ss-thread" />
         <module name="ss-xxlJob" />
         <module name="ss-lock" />
@@ -49,6 +50,7 @@
       <module name="ss-rabbitMq" options="" />
       <module name="ss-redis" options="" />
       <module name="ss-resilience4j" options="" />
+      <module name="ss-swagger" options="-parameters" />
       <module name="ss-thread" options="" />
       <module name="ss-webSocket" options="-parameters" />
       <module name="ss-xxlJob" options="" />

@@ -36,6 +36,7 @@
     <file url="file://$PROJECT_DIR$/ss-redis/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-resilience4j/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-resilience4j/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ss-swagger/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-thread/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-thread/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ss-webSocket/src/main/java" charset="UTF-8" />
